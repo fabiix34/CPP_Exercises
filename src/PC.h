@@ -20,10 +20,10 @@ public:
 
     void transfer(const PokemonPtr& pokemon)
     {
-        _pokemons.emplace_back(pokemon);
+        _pokemons.push_back(std::move(pokemon));
     }   
 
-    std::vector<PokemonPtr> pokemons()
+    std::vector<PokemonPtr>& pokemons()
     {
         return _pokemons;
     }
