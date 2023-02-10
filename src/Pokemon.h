@@ -14,6 +14,9 @@ public:
         std::cout << "Pokemon " << name << " created !" << std::endl;
     }
 
+    // pour faire un constructeur de copy
+    // il faut également redéfinir l'operator =
+    
     Pokemon(const Pokemon& poke)
         : _name{poke._name}, _id{idGlobal++}
     {
