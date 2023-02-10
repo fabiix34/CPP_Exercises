@@ -15,15 +15,20 @@ public:
 
     bool empty()
     {
-        return true;
+        return _pokemons.size() == 0;
     }
 
-    std::vector<Pokemon> pokemons()
+    void transfer(const PokemonPtr& pokemon)
     {
-        return {};
+        _pokemons.emplace_back(pokemon);
+    }   
+
+    std::vector<PokemonPtr> pokemons()
+    {
+        return _pokemons;
     }
 
 private:
-    
+    std::vector<PokemonPtr> _pokemons;
 };
 
