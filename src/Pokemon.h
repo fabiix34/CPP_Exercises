@@ -8,17 +8,25 @@
 class Pokemon
 {
 public:
-    Pokemon(const std::string &name)
+    Pokemon(const std::string& name)
+        : _name{name}, _id{idGlobal++}
     {
-        _name = name;
-        _id = idGlobal++;
         std::cout << "Pokemon " << name << " created !" << std::endl;
     }
 
-    Pokemon(const Pokemon& other)
-    : _name(other._name), _id(other._id)
+    Pokemon(const Pokemon& poke)
+        : _name{poke._name}, _id{idGlobal++}
     {
-        std::cout << "Pokemon copied with success !" << std::endl;
+    }
+
+    Pokemon& operator=(const Pokemon& other)
+    {
+        if (this != &other)
+        {
+            _name = other._name;
+        }
+
+        return *this;
     }
 
     std::string name() const
