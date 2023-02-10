@@ -4,6 +4,7 @@
 #include <iostream>
 #include <utility>
 
+
 // A creature that is cute and can fight other ones.
 class Pokemon
 {
@@ -49,3 +50,5 @@ private:
     // que la variable existe deja
     static inline int idGlobal;
 };
+
+typedef std::unique_ptr<Pokemon> PokemonPtr;
