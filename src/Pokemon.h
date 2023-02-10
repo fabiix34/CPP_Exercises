@@ -15,8 +15,8 @@ public:
         std::cout << "Pokemon " << name << " created !" << std::endl;
     }
 
-    Pokemon(const Pokemon& poke)
-    : _name(poke._name), _id(poke._id)
+    Pokemon(const Pokemon& other)
+    : _name(other._name), _id(other._id)
     {
         std::cout << "Pokemon copied with success !" << std::endl;
     }
