@@ -1,6 +1,6 @@
 #include "Trainer.h"
 
-Trainer::Trainer(const std::string &name, PC pc)
+Trainer::Trainer(const std::string &name, PC& pc)
     : _name{name}, _pc{pc}
 {
     std::cout << name << " has become a trainer !" << std::endl;

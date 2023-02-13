@@ -6,11 +6,11 @@
 class Trainer
 {
 public:
-    Trainer(const std::string& name , PC pc);
+    Trainer(const std::string& name , PC& pc);
 
     const std::string& name() const;
 
 private:
     std::string _name;
-    PC _pc;
+    PC& _pc;
 };
