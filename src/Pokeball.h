@@ -5,28 +5,16 @@
 // A ball where a Pokemon sleeps.
 class Pokeball
 {
-    public:
-    Pokeball()
-    {
-        std::cout << "pokeball created !" << std::endl;
-    }
+public:
+    Pokeball();
 
-    bool empty() const
-    {
-        return _empty;
-    }
+    bool empty() const;
 
-    void store(PokemonPtr pokemon)
-    {
-        *_pokemon = *pokemon;
-    }
+    void store(PokemonPtr pokemon);
 
-    Pokemon pokemon()
-    {
-        return *_pokemon;
-    }
+    Pokemon pokemon();
 
-    private:
+private:
     bool _empty = true;
     PokemonPtr _pokemon = nullptr;
 };

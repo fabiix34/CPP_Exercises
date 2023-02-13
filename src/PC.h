@@ -8,27 +8,16 @@
 class PC
 {
 public:
-    PC()
-    {
-        std::cout << "PC created !" << std::endl;
-    }
+    PC();
 
-    bool empty()
-    {
-        return _pokemons.size() == 0;
-    }
+    PC(const PC& other);
 
-    void transfer(const PokemonPtr& pokemon)
-    {
-        _pokemons.push_back(std::move(pokemon));
-    }   
+    bool empty();
 
-    std::vector<PokemonPtr>& pokemons()
-    {
-        return _pokemons;
-    }
+    void transfer(PokemonPtr pokemon);
+
+    std::vector<PokemonPtr> &pokemons();
 
 private:
     std::vector<PokemonPtr> _pokemons;
 };
-

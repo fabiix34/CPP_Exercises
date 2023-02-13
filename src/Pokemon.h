@@ -4,44 +4,22 @@
 #include <iostream>
 #include <utility>
 
-
 // A creature that is cute and can fight other ones.
 class Pokemon
 {
 public:
-    Pokemon(const std::string& name)
-        : _name{name}, _id{idGlobal++}
-    {
-        std::cout << "Pokemon " << name << " created !" << std::endl;
-    }
+    Pokemon(const std::string &name);
 
     // pour faire un constructeur de copy
     // il faut également redéfinir l'operator =
-    
-    Pokemon(const Pokemon& poke)
-        : _name{poke._name}, _id{idGlobal++}
-    {
-    }
 
-    Pokemon& operator=(const Pokemon& other)
-    {
-        if (this != &other)
-        {
-            _name = other._name;
-        }
+    Pokemon(const Pokemon &poke);
 
-        return *this;
-    }
+    Pokemon &operator=(const Pokemon &other);
 
-    std::string name() const
-    {
-        return _name;
-    }
+    const std::string& name() const;
 
-    int id() const
-    {
-        return _id;
-    }
+    int id() const;
 
 private:
     std::string _name;

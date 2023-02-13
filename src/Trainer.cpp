@@ -1,1 +1,12 @@
 #include "Trainer.h"
+
+Trainer::Trainer(const std::string &name, PC pc)
+    : _name{name}, _pc{pc}
+{
+    std::cout << name << " is become a trainer !" << std::endl;
+}
+
+const std::string& Trainer::name() const
+{
+    return _name;
+}
