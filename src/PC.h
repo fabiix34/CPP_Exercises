@@ -12,10 +12,10 @@ public:
 
     bool empty();
 
-    void transfer(Pokemon::PokemonPtr pokemon);
+    void transfer(PokemonPtr pokemon);
 
-    const std::vector<Pokemon::PokemonPtr> &pokemons() const;
+    const std::vector<PokemonPtr> &pokemons() const;
 
 private:
-    std::vector<Pokemon::PokemonPtr> _pokemons;
+    std::vector<PokemonPtr> _pokemons;
 };

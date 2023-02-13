@@ -27,5 +27,6 @@ private:
     // inline permet de faire croire au compilateur
     // que la variable existe deja
     static inline int idGlobal;
-    using PokemonPtr = std::unique_ptr<Pokemon> ;
 };
+
+using PokemonPtr = std::unique_ptr<Pokemon>;

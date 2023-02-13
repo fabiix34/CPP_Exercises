@@ -10,7 +10,7 @@ bool PC::empty()
     return _pokemons.size() == 0;
 }
 
-void PC::transfer(Pokemon::PokemonPtr pokemon)
+void PC::transfer(PokemonPtr pokemon)
 {
     // il faut mettre std::move pour faire le
     // changement ? Pourquoi ?
@@ -18,7 +18,7 @@ void PC::transfer(Pokemon::PokemonPtr pokemon)
     std::cout << pokemon->name() << std::endl;
 }
 
-const std::vector<Pokemon::PokemonPtr> &PC::pokemons() const
+const std::vector<PokemonPtr> &PC::pokemons() const
 {
     return _pokemons;
 }
