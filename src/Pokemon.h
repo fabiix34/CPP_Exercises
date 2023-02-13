@@ -8,8 +8,6 @@
 class Pokemon
 {
 public:
-    typedef const std::unique_ptr<Pokemon> PokemonPtr;
-
     Pokemon(const std::string &name);
 
     // pour faire un constructeur de copy
@@ -29,4 +27,5 @@ private:
     // inline permet de faire croire au compilateur
     // que la variable existe deja
     static inline int idGlobal;
+    using PokemonPtr = std::unique_ptr<Pokemon> ;
 };

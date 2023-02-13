@@ -10,11 +10,11 @@ public:
 
     bool empty() const;
 
-    void store(Pokemon::PokemonPtr pokemon);
+    void store(PokemonPtr pokemon);
 
     Pokemon pokemon();
 
 private:
     bool _empty = true;
-    Pokemon::PokemonPtr _pokemon = nullptr;
+    PokemonPtr _pokemon = nullptr;
 };
