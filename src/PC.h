@@ -10,14 +10,12 @@ class PC
 public:
     PC();
 
-    PC(const PC& other);
-
     bool empty();
 
-    void transfer(PokemonPtr pokemon);
+    void transfer(Pokemon::PokemonPtr pokemon);
 
-    std::vector<PokemonPtr> &pokemons();
+    const std::vector<Pokemon::PokemonPtr> &pokemons() const;
 
 private:
-    std::vector<PokemonPtr> _pokemons;
+    std::vector<Pokemon::PokemonPtr> _pokemons;
 };

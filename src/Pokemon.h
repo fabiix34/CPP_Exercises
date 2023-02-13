@@ -8,6 +8,8 @@
 class Pokemon
 {
 public:
+    typedef const std::unique_ptr<Pokemon> PokemonPtr;
+
     Pokemon(const std::string &name);
 
     // pour faire un constructeur de copy
@@ -17,7 +19,7 @@ public:
 
     Pokemon &operator=(const Pokemon &other);
 
-    const std::string& name() const;
+    const std::string &name() const;
 
     int id() const;
 
@@ -28,5 +30,3 @@ private:
     // que la variable existe deja
     static inline int idGlobal;
 };
-
-typedef std::unique_ptr<Pokemon> PokemonPtr;

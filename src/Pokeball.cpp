@@ -10,7 +10,7 @@ bool Pokeball::empty() const
     return _empty;
 }
 
-void Pokeball::store(PokemonPtr pokemon)
+void Pokeball::store(Pokemon::PokemonPtr pokemon)
 {
     *_pokemon = *pokemon;
 }
