@@ -10,6 +10,8 @@ public:
 
     const std::string& name() const;
 
+    const PC& pc() const;
+
 private:
     std::string _name;
     PC& _pc;

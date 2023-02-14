@@ -8,7 +8,6 @@
 class PC
 {
 public:
-    PC();
 
     bool empty();
 

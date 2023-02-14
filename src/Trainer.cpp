@@ -10,3 +10,8 @@ const std::string& Trainer::name() const
 {
     return _name;
 }
+
+const PC& Trainer::pc() const
+{
+    return _pc;
+}

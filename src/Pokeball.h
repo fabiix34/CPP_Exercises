@@ -12,9 +12,8 @@ public:
 
     void store(PokemonPtr pokemon);
 
-    Pokemon pokemon();
+    const Pokemon& pokemon() const;
 
 private:
-    bool _empty = true;
     PokemonPtr _pokemon = nullptr;
 };

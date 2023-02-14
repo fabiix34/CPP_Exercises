@@ -7,15 +7,15 @@ Pokeball::Pokeball()
 
 bool Pokeball::empty() const
 {
-    return _empty;
+    return _pokemon == nullptr;
 }
 
 void Pokeball::store(PokemonPtr pokemon)
 {
-    *_pokemon = *pokemon;
+    _pokemon = std::move(pokemon);
 }
 
-Pokemon Pokeball::pokemon()
+const Pokemon& Pokeball::pokemon() const
 {
     return *_pokemon;
 }
